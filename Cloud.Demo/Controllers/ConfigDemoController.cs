@@ -23,7 +23,7 @@ namespace Cloud.Demo.Controllers
         [HttpGet]
         public IEnumerable<KeyValuePair<string, string>> GetConfig()
         {
-            var keys = _configuration.GetSection("AppSettings").AsEnumerable().ToList();
+            var keys = _configuration.GetSection("AppSettings").AsEnumerable().Where(v => v.Value != null);
             return keys;
         }
     }
