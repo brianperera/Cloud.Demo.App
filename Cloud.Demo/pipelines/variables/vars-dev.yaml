@@ -1,0 +1,2 @@
+variables:
+  custom-variable-api-key: "This is a DEV variable from YAML in repo"
